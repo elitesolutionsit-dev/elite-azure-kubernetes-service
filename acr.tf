@@ -10,9 +10,9 @@ resource "random_string" "random" {
 }
 
 resource "azurerm_container_registry" "eliteacr" {
-  name                     = "eliteclusterdemoapp${random_string.random.result}"
-  resource_group_name      = local.azurecontainerrgistry
-  location                 = local.buildregion
-  sku                      = "Standard"
-  admin_enabled            = false
+  name                = "eliteclusterdemoapp${random_string.random.result}"
+  resource_group_name = local.azurecontainerrgistry
+  location            = local.buildregion
+  sku                 = "Standard"
+  admin_enabled       = false
 }
