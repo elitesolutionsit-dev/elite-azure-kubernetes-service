@@ -7,7 +7,8 @@ locals {
     ManagedWith = "terraform"
 
   }
-  
-  buildregion     = var.buildregion
-  SubcriptionName = var.SubcriptionName
+
+  buildregion           = var.buildregion
+  SubcriptionName       = var.SubcriptionName
+  azurecontainerrgistry = "eliteclusterdemo-devregistry"
 }
