@@ -3,11 +3,8 @@ resource "azurerm_resource_group" "eliteacr" {
   name     = local.azurecontainerrgistry
   location = local.buildregion
 }
-
-resource "random_string" "random-name" {
-  length  = 8
-  upper   = false
-  lower   = false
-  numeric = false
-  special = false
+resource "random_string" "random" {
+  length           = 5
+  special          = false
+  override_special = "/@£$"
 }
