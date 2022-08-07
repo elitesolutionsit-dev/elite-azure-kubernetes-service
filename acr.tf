@@ -7,7 +7,8 @@ resource "random_string" "random" {
   length           = 5
   special          = false
   lower            = true
-  override_special = "/@£$"
+  upper            = "false"
+  override_special = "!@#$%&*()-_=+[]{}<>:?"
 }
 
 resource "azurerm_container_registry" "eliteacr" {
