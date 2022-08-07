@@ -31,7 +31,7 @@ resource "random_id" "log_analytics_workspace_name_suffix" {
 
 resource "azurerm_log_analytics_workspace" "elitedemoAnalytics" {
   # The WorkSpace name has to be unique across the whole of azure, not just the current subscription/tenant.
-  name                = "${var.log_analytics_workspace_name}-${random_id.log_analytics_workspace_name_suffix.dec}"
+  name                = "${local.log_analytics_workspace_name}-${random_id.log_analytics_workspace_name_suffix.dec}"
   location            = local.log_analytics_workspace_location
   resource_group_name = local.azurekubernetesrg
   sku                 = var.log_analytics_workspace_sku
@@ -57,7 +57,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   name                = local.cluster_name
   location            = local.azurekubernetesrg
   resource_group_name = local.buildregion
-  dns_prefix          = local.dns_prefix
+  dns_prefix          = var.dns_prefix
 
   linux_profile {
     admin_username = "ubuntu"
