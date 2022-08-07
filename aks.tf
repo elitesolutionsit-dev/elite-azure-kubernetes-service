@@ -55,8 +55,8 @@ resource "azurerm_log_analytics_solution" "elitedemoAnalytics" {
  *******/
 resource "azurerm_kubernetes_cluster" "k8s" {
   name                = local.cluster_name
-  location            = local.azurekubernetesrg
-  resource_group_name = local.buildregion
+  location            = local.buildregion
+  resource_group_name = local.azurekubernetesrg
   dns_prefix          = var.dns_prefix
 
   linux_profile {
