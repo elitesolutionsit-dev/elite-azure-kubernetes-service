@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "eliteacr" {
 resource "random_string" "random" {
   length           = 5
   special          = false
-  lower            = false
+  lower            = true
   override_special = "/@£$"
 }
 
