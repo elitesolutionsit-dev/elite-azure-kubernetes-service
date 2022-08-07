@@ -8,7 +8,11 @@ locals {
 
   }
 
-  buildregion           = var.buildregion
-  SubcriptionName       = var.SubcriptionName
-  azurecontainerrgistry = "eliteclusterdemo-devregistry"
+  buildregion                      = var.buildregion
+  SubcriptionName                  = var.SubcriptionName
+  azurecontainerrgistry            = "eliteclusterdemo-devregistry"
+  azurekubernetesrg                = "eliteclusterdemo-devrg"
+  cluster_name                     = "eliteclusterdemodev"
+  log_analytics_workspace_location = "eastus2"
+  log_analytics_workspace_name     = "eliteclusterdemoAnalytics"
 }
