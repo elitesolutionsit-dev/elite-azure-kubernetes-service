@@ -20,5 +20,5 @@ provider "azurerm" {
 
 provider "kubernetes" {
   alias       = "kubernetes"
-  config_path = "C:\\Users\\lbena\\.kube\\config"
+  config_path = "./azurecredentials"
 }
