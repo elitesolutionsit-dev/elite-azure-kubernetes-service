@@ -96,8 +96,10 @@ resource "azurerm_kubernetes_cluster" "k8s" {
 /*************
  * NAMESPACE *
  *************/
- # Create Namespace
+# Create Namespace
 resource "kubernetes_namespace" "eliteclusterdemo" {
+
+  provider = azurerm.kubernetes
   metadata {
     annotations = {
       name = "eliteclusterdemo"
