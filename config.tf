@@ -17,3 +17,8 @@ provider "azurerm" {
   skip_provider_registration = true
   features {}
 }
+
+provider "kubernetes" {
+  alias = "kubernetes"
+  config_path    = "C:\\Users\\lbena\\.kube\\config"
+}
