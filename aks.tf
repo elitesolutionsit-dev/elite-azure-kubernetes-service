@@ -92,3 +92,21 @@ resource "azurerm_kubernetes_cluster" "k8s" {
 
   tags = local.common_tags
 }
+
+/*************
+ * NAMESPACE *
+ *************/
+ # Create Namespace
+resource "kubernetes_namespace" "eliteclusterdemo" {
+  metadata {
+    annotations = {
+      name = "eliteclusterdemo"
+    }
+
+    labels = {
+      mylabel = "eliteclusterdemo"
+    }
+
+    name = "eliteclusterdemo"
+  }
+}
